@@ -23,12 +23,12 @@ jobs:
       with:
         node-version: '16' # Specify the Node.js version
         cache: 'yarn' # Enable Yarn caching
-#    - name: Install dependencies using Yarn
-#      run: yarn install
     - run : git config user.name github-actions
       shell: bash
     - run : git config user.email github-actions@github.com
       shell: bash
+    - name: Install dependencies using Yarn
+      run: yarn install      
     - run : yarn run deploy
       shell: bash
 #    - run : git --work-tree build add --all
