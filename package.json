@@ -1,9 +1,12 @@
 {
   "name": "cidr.xyz",
   "version": "1.0.0",
+  "homepage": "https://prabhatraghav.github.io/cidr",
   "description": "Web-based CIDR / netmask / IP address visualizer",
   "main": "index.js",
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production"
   },
