@@ -5,7 +5,7 @@
   "description": "Web-based CIDR / netmask / IP address visualizer",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production"
