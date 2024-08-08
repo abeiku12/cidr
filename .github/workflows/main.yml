@@ -29,9 +29,9 @@ jobs:
 
     - name: Install dependencies using Yarn
       run: yarn install
-      
-    - run : yarn run build
-      shell: bash
+    
+    - name: Build the project      
+      run: yarn run build
             
     - name: Deploy the project
       run: |
