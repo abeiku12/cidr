@@ -34,12 +34,18 @@ jobs:
       run: yarn run build
             
     - name: Deploy the project
+      working-directory: build  # Set to the directory where the build output is located
       run: |
+        git fetch origin gh-pages
+        git checkout gh-pages || git checkout --orphan gh-pages
+        rm -rf *
+        cp -a ../build/. .
         git config user.name "github-actions"
         git config user.email "github-actions@github.com"
-        cd build
         git init
         git add --all
         git commit -m "Deploy build output"
         git push origin HEAD:gh-pages --force
-      working-directory: build  # Set to the directory where the build output is located
+    
+    - name: Clean up build directory
+      run: rm -rf build
