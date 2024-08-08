@@ -40,4 +40,4 @@ jobs:
         git add --all
         git commit -m "Deploy build output"
         git push origin HEAD:gh-pages --force
-      working-directory: build  # Set to the directory where the build output is located
+      #working-directory: build  # Set to the directory where the build output is located
