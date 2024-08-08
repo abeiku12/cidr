@@ -24,22 +24,24 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y python2 g++ make
-        
+      
+    - name: Install dependencies using Yarn
+      run: yarn install
+      
+    - run : yarn run build
+      shell: bash
+      
     - run : git config user.name github-actions
       shell: bash
       
     - run : git config user.email github-actions@github.com
       shell: bash
       
-    - name: Install dependencies using Yarn
-      run: yarn install      
-      
-    - run : yarn run deploy
+    - run : git --work-tree build add --all
       shell: bash
       
-#    - run : git --work-tree build add --all
-#      shell: bash
-#    - run : git commit -m "Automatic Build and Deploy run by GitHub Actions"
-#      shell: bash
-#    - run : git push origin HEAD:gh-pages --force
-#      shell: bash
+    - run : git commit -m "Automatic Build and Deploy run by GitHub Actions"
+      shell: bash
+      
+    - run : git push origin HEAD:gh-pages --force
+      shell: bash
