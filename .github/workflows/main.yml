@@ -14,23 +14,29 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
-    - name: Install Python 2
-      run: |
-        sudo apt-get update
-        sudo apt-get install python2-minimal    
-    - name: Set up Node.js and Yarn
+    
+    - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16' # Specify the Node.js version
-        cache: 'yarn' # Enable Yarn caching
+        node-version: '14'  # Use Node.js 14.x for better compatibility with node-sass
+        
+    - name: Install build tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y python2 g++ make
+        
     - run : git config user.name github-actions
       shell: bash
+      
     - run : git config user.email github-actions@github.com
       shell: bash
+      
     - name: Install dependencies using Yarn
       run: yarn install      
+      
     - run : yarn run deploy
       shell: bash
+      
 #    - run : git --work-tree build add --all
 #      shell: bash
 #    - run : git commit -m "Automatic Build and Deploy run by GitHub Actions"
