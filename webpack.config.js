@@ -33,6 +33,10 @@ module.exports = {
       }
     ]
   },
+  output: {
+    path: path.resolve(__dirname, 'build'),  // Specify the build directory
+    filename: 'main.js'
+  },  
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/index.html',
