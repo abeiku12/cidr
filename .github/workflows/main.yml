@@ -17,7 +17,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '14'  # Use Node.js 14.x for better compatibility with node-sass
+        node-version: '13.14.0'  # Use Node.js 14.x for better compatibility with node-sass
         
     - name: Install build tools
       run: |
@@ -27,8 +27,8 @@ jobs:
     - name: Install Yarn
       run: npm install -g yarn
 
-    - name: Install dependencies using Yarn
-      run: yarn install
+#    - name: Install dependencies using Yarn
+#      run: yarn install
     
     - name: Build the project
       run: yarn run build
