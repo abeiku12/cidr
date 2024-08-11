@@ -8,8 +8,8 @@ class IPAddress extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      octets: [10, 88, 135, 144],
-      cidr: 28
+      octets: [172, 16, 0, 0],
+      cidr: 16
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -161,23 +161,37 @@ class IPAddress extends Component {
           </ol>
         </div>
 
+        <div className="cidrdetails">
+          <span className="labellarge">- - - - - - - - - - - - - - - - - CIDR Range Details - - - - - - - - - - - - - - - - -</span>
+        </div>
+
+        <div className="break">
+        </div>
+
         <div className="details">
-          <span className="netmask">
-            <span className="value">{details.mask}</span>
-            <span className="label">Netmask</span>
-          </span>
-          <span className="base">
-            <span className="value">{details.base}</span>
-            <span className="label">CIDR Base IP</span>
-          </span>
-          <span className="broadcast">
-            <span className="value">{details.broadcast}</span>
-            <span className="label">Broadcast IP</span>
-          </span>
-          <span className="count">
-            <span className="value">{details.size.toLocaleString()}</span>
-            <span className="label">Count</span>
-          </span>
+              <span className="netmask">
+                <span className="value">{details.mask}</span>
+                <span className="labelsmall">Netmask</span>
+              </span>
+              <span className="base">
+                <span className="value">{details.base}</span>
+                <span className="labelsmall">Base IP</span>
+              </span>
+              <span className="broadcast">
+                <span className="value">{details.broadcast}</span>
+                <span className="labelsmall">Broadcast IP</span>
+              </span>
+              <span className="count">
+                <span className="value">{details.size.toLocaleString()}</span>
+                <span className="labelsmall">No. of Host</span>
+              </span>
+        </div>
+
+        <div className="break">
+        </div>
+
+        <div className="usableiprange">
+          <span className="label">- - - - - - - - - - Usable IP Address Range - - - - - - - - - -</span>
         </div>
 
         <div className="break">
@@ -186,11 +200,11 @@ class IPAddress extends Component {
         <div className="usable">
           <span className="first">
             <span className="value">{details.first}</span>
-            <span className="label">First Usable IP</span>
+            <span className="labelsmall">First usable IP</span>
           </span>
           <span className="last">
             <span className="value">{details.last}</span>
-            <span className="label">Last Usable IP</span>
+            <span className="labelsmall">Last usable IP</span>
           </span>
         </div>
       </div>

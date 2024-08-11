@@ -14,16 +14,35 @@ $color_e: #aaa;
 $octet_lighten: 15%;
 
 body {
-  background: #eee;
+  background: #fabaf4;
   font-family: 'Ubuntu', sans-serif;
+  @media (max-width: $xl) {
+    background: #fee1fc;
+  }
   header {
     margin-bottom: 30px;
-    margin-left: 40px;
-    h1 {
-      small {
-        text-transform: uppercase;
-        color: #669;
-        display: block;
+    margin-left: 0px;
+    text-align: center;
+    @media (max-width: $xl) {
+      margin-bottom: 20px;
+      margin-left: 0px;
+      text-align: center;
+    }
+    h2 {
+      color: rgb(121, 121, 147);
+      text-transform: uppercase;
+      display: block;
+      @media (max-width: $xl) {
+        font-size: calc(0.8em + 0.5vw);
+      }
+    }
+    small {
+      text-transform: uppercase;
+      font-size: 2.9em;
+      color: rgb(79, 79, 123);
+      display: block;
+      @media (max-width: $xl) {
+        font-size: calc(2.0em + 0.6vw);
       }
     }
     p {
@@ -40,12 +59,25 @@ body {
     div {
       margin-top: 65px;
     }
+    div.inputcidr {
+      display: inline-flex;
+      text-align: left;
+      justify-content: space-around;
+      margin-top: 0px;
+      width: 100%;
+      @media (min-width: 640px) {
+        width: 640px;
+      }
+      span {
+        display: block;
+      }
+    }
     div.address {
       input {
         width: 2.5em;
-        font-size: 2.7em;
+        font-size: 3.7em;
         @media (max-width: $xl) {
-          font-size: calc(1em + 1.9vw);
+          font-size: calc(1em + 1.7vw);
         }
         text-align: center;
         border: 0px;
@@ -55,7 +87,7 @@ body {
         span.dot {
           text-align: center;
           padding: 0.1em 0.13em;
-          font-size: 2.7em;
+          font-size: 3.5em;
           @media (max-width: $xl) {
             font-size: calc(1em + 1.7vw);
           }
@@ -78,10 +110,14 @@ body {
       }
     }
     div.bits {
+      margin-top: 40px;
+      @media (max-width: $xl) {
+        margin-top: 30px;
+      }
       ol {
         display: inline;
-        padding-left: 0px;
-        padding-right: 15px;
+        padding-left: 7px;
+        padding-right: 7px;
         li.octet {
           display: inline;
           ol {
@@ -89,7 +125,8 @@ body {
               display: inline;
               padding: 0.6em;
               @media (max-width: $xl) {
-                padding: calc(-0.1em + 0.7vw);
+                padding: calc(-0.1em + 0.6vw);
+                font-weight: bold;
               }
               margin-left: -1px;
               border: 1px black solid;
@@ -113,9 +150,22 @@ body {
         }
       }
     }
+    div.cidrdetails {
+      display: inline-flex;
+      justify-content: space-around;
+      margin-top: 70px;
+      width: 100%;
+      @media (min-width: 640px) {
+        width: 640px;
+      }
+      span {
+        display: block;
+      }
+    }
     div.details {
       display: inline-flex;
       justify-content: space-around;
+      margin-top: 25px;
       width: 100%;
       @media (min-width: 640px) {
         width: 640px;
@@ -129,10 +179,10 @@ body {
       height: 0px;
       margin: 0px;
     }
-    div.usable {
+    div.usableiprange {
       display: inline-flex;
       justify-content: space-around;
-      margin-top: 30px;
+      margin-top: 25px;
       width: 100%;
       @media (min-width: 640px) {
         width: 640px;
@@ -141,17 +191,75 @@ body {
         display: block;
       }
     }
-    span.value {
-      font-size: 1.22em;
+    div.usable {
+      display: inline-flex;
+      justify-content: space-around;
+      margin-top: 10px;
+      width: 100%;
+      @media (min-width: 640px) {
+        width: 640px;
+      }
+      span {
+        display: block;
+      }
+    }
+    span.labelxlarge {
+      display: block;
+      font-family: 'Ubuntu', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.8em;
       @media (max-width: $xl) {
         font-size: calc(0.7em + 0.6vw);
       }
+      font-weight: bold;
+      color: #353538;
+    }
+    span.value {
+      font-size: 1.22em;
+      font-weight: none;
+      @media (max-width: $xl) {
+        font-size: calc(0.7em + 0.6vw);
+        font-weight: bold;
+      }
+    }
+    span.labellarge {
+      display: block;
+      font-family: 'Ubuntu', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.38em;
+      @media (max-width: $xl) {
+        font-size: calc(0.7em + 0.6vw);
+      }
+      font-weight: bold;
+      color: #454551;
     }
     span.label {
       display: block;
       font-family: 'Ubuntu', sans-serif;
       text-transform: uppercase;
+      font-size: 1.04em;
+      @media (max-width: $xl) {
+        font-size: calc(0.7em + 0.6vw);
+      }
+      font-weight: bold;
+      color: #656582;
+    }
+    span.range {
+      display: block;
+      font-family: 'Ubuntu', sans-serif;
+      text-transform: uppercase;
       font-size: 1.22em;
+      @media (max-width: $xl) {
+        font-size: calc(0.7em + 0.6vw);
+      }
+      font-weight: bold;
+      color: #656582;
+    }
+    span.labelsmall {
+      display: block;
+      font-family: 'Ubuntu', sans-serif;
+      text-transform: none;
+      font-size: 1.0em;
       @media (max-width: $xl) {
         font-size: calc(0.7em + 0.6vw);
       }
