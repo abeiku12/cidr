@@ -24,11 +24,8 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y python2 g++ make
         
-#    - name: Install Yarn
-#      run: npm install -g yarn
-
-#    - name: Install dependencies using Yarn
-#      run: yarn install
+    - name: Install dependencies using Yarn
+      run: yarn install
     
     - name: Build the project
       run: yarn run build
