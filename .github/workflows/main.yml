@@ -22,7 +22,7 @@ jobs:
     - name: Install build tools
       run: |
         sudo apt-get update
-        sudo apt-get install -y python2 g++
+        sudo apt-get install -y python3
         
     - name: Install dependencies using Yarn
       run: yarn install
