@@ -30,17 +30,17 @@ jobs:
     - name: Build the project
       run: yarn run build
 
-    - name: Copy build-dir files to root
+    - name: Copy build-dir files to root and delete all the files with exceptions
       run: |
         sudo mv ./build/* ./
-        sudo rm -r ./build
+        sudo find . -mindepth 1 -maxdepth 1 ! \( -name 'index.html' -o -name 'main.js' -o -name 'CNAME' \) -exec rm -rf {} +
             
     - name: Deploy the project
       #working-directory: build  # Set to the directory where the build output is located
       run: |
         git config user.name "github-actions"
         git config user.email "github-actions@github.com"
-        git add index.html main.js yarn.lock CNAME
+        git add .
         git commit -m "Deploy build output"
         git push origin HEAD:gh-pages --force
 
