@@ -43,7 +43,7 @@ jobs:
       run: |
         git config user.name "github-actions"
         git config user.email "github-actions@github.com"
-        git add --all
+        git add index.html main.js CNAME
         git commit -m "Deploy build output"
         git push origin HEAD:gh-pages --force
 
