@@ -33,7 +33,7 @@ jobs:
     - name: Copy build-dir files to root and delete all the files with exceptions
       run: |
         sudo mv ./build/* ./
-        sudo find . -mindepth 1 -maxdepth 1 ! \( -name 'index.html' -o -name 'main.js' -o -name 'CNAME' \) -exec rm -rf {} +
+        sudo find . -mindepth 1 -maxdepth 1 ! \( -name 'index.html' -o -name 'main.js' -o -name 'CNAME' -o -name '.git' \) -exec rm -rf {} +
             
     - name: Deploy the project
       #working-directory: build  # Set to the directory where the build output is located
