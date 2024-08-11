@@ -23,20 +23,27 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y python2 g++ make
+        
     - name: Install Yarn
-      run: npm install -g yarn      
+      run: npm install -g yarn
 
     - name: Install dependencies using Yarn
       run: yarn install
     
-    - name: Build the project      
+    - name: Build the project
       run: yarn run build
+
+    - name: Copy build-dir files to root
+      run: |
+        sudo mv ./build/* ./
+        sudo rm -r ./build
             
     - name: Deploy the project
+      #working-directory: build  # Set to the directory where the build output is located
       run: |
         git config user.name "github-actions"
         git config user.email "github-actions@github.com"
         git add --all
         git commit -m "Deploy build output"
         git push origin HEAD:gh-pages --force
-      working-directory: build  # Set to the directory where the build output is located
+
