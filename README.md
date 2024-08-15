@@ -3,9 +3,9 @@
 
 # cidr.xyz
 
-**Web-based CIDR / netmask / IP address visualizer - https://cidr.xyz**
+**Web-based CIDR / netmask / IP address visualizer**
 
-[![cidr.png](cidr.png)](https://cidr.xyz)
+[![cidr.png](cidr.png)]()
 
 ## Dev
 
