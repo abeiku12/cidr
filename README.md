@@ -1,7 +1,7 @@
 [![Build](https://github.com/prabhatraghav/cidr/actions/workflows/main.yml/badge.svg)](https://github.com/prabhatraghav/cidr/actions/workflows/main.yml)
 [![pages-build-deployment](https://github.com/prabhatraghav/cidr/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/prabhatraghav/cidr/actions/workflows/pages/pages-build-deployment)
 
-# cidr.xyz
+
 
 **Web-based CIDR / netmask / IP address visualizer**
 
