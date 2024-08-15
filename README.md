@@ -3,7 +3,8 @@
 
 
 
-**Web-based CIDR / netmask / IP address visualizer**
+**CIDR Range Visualizer**
+**An Interactive Web-based IP Address Range Display App**
 
 [![cidr.png](cidr.png)]()
 
