@@ -1,7 +1,6 @@
 [![Build](https://github.com/prabhatraghav/cidr/actions/workflows/main.yml/badge.svg)](https://github.com/prabhatraghav/cidr/actions/workflows/main.yml)
 [![pages-build-deployment](https://github.com/prabhatraghav/cidr/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/prabhatraghav/cidr/actions/workflows/pages/pages-build-deployment)
-
-
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fcidr.prabhatraghav.online%2F)
 
 **CIDR Range Visualizer**
 **An Interactive Web-based IP Address Range Display App**
