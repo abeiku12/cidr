@@ -1,6 +1,6 @@
 [![Build](https://github.com/prabhatraghav/cidr/actions/workflows/main.yml/badge.svg)](https://github.com/prabhatraghav/cidr/actions/workflows/main.yml)
 [![pages-build-deployment](https://github.com/prabhatraghav/cidr/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/prabhatraghav/cidr/actions/workflows/pages/pages-build-deployment)
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fcidr.prabhatraghav.online%2F&label=cidr.prabhatraghav.online&cacheSeconds=60)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fcidr.prabhatraghav.online%2F&label=cidr.prabhatraghav.online&cacheSeconds=60&link=https%3A%2F%2Fcidr.prabhatraghav.online%2F)
 
 
 **CIDR Range Visualizer**
