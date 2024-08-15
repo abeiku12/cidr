@@ -1,9 +1,0 @@
-node_modules/
-bundle.js
-dist/
-build
-build/
-.git
-node_modules
-.git/
-package-lock.json
